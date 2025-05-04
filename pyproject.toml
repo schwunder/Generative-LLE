@@ -1,0 +1,30 @@
+[project]
+name = "glle"
+version = "0.1.0"
+description = "Generative Locally Linear Embedding for manifold unfolding"
+readme = "glle/README.md"
+license = { file = "glle/LICENSE" }
+authors = [
+  { name="Benyamin Ghojogh" },
+  { name="Ali Ghodsi"     },
+  { name="Fakhri Karray"  },
+  { name="Mark Crowley"   },
+]
+requires-python = ">=3.7"
+dependencies = [
+  "numpy",
+  "matplotlib",
+  "scikit-learn",
+]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["glle", "glle.*"]
+
+[tool.setuptools.package-data]
+"glle"           = ["settings.json", "requirements.txt"]
+"glle.datasets"  = ["*"]
+"glle.saved_files" = ["*"]

@@ -1,15 +1,17 @@
-from functions.my_LLE import My_LLE
-from functions.my_GLLE import My_GLLE
-from functions.my_GLLE_DirectSampling import My_GLLE_DirectSampling
-import functions.load_datasets as load_datasets
-import functions.utils as utils
+from glle.functions.my_LLE import My_LLE
+from glle.functions.my_GLLE import My_GLLE
+from glle.functions.my_GLLE_DirectSampling import My_GLLE_DirectSampling
+import glle.functions.load_datasets as load_datasets
+from glle.functions import utils
 from sklearn import manifold, datasets
 import numpy as np
 from sklearn.preprocessing import StandardScaler
 from numpy import genfromtxt
+import os
 
 import json
-with open('settings.json') as json_file:
+settings_path = os.path.join(os.path.dirname(__file__), "settings.json")
+with open(settings_path) as json_file:
     settings = json.load(json_file)
 
 # ##################################### options for settings in the json file #####################################

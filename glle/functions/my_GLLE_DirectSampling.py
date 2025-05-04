@@ -1,7 +1,7 @@
 import numpy as np
-from functions.my_LLE import My_LLE
+from .my_LLE import My_LLE
 import matplotlib.pyplot as plt
-import functions.utils as utils
+from . import utils
 
 
 class My_GLLE_DirectSampling:

@@ -3,7 +3,7 @@ from sklearn.metrics.pairwise import pairwise_kernels
 from sklearn.metrics import pairwise_distances
 from sklearn.neighbors import kneighbors_graph as KNN   # https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.kneighbors_graph.html
 from sklearn.neighbors import NearestNeighbors as KNN2  # https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.NearestNeighbors.html  and  https://stackoverflow.com/questions/21052509/sklearn-knn-usage-with-a-user-defined-metric
-import functions.utils as utils
+from . import utils
 
 
 class My_GLLE:
